@@ -6,6 +6,8 @@ A production-ready Flutter mobile application demonstrating Clean Architecture p
 ![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2?logo=dart)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+**📦 Repository:** [github.com/ArslanYousaf12/drop-flutter-prototype](https://github.com/ArslanYousaf12/drop-flutter-prototype)
+
 ## 🎥 Live Demo
 
 **Want to see it in action first?** Watch the app running on iOS Simulator:
@@ -178,20 +180,21 @@ flutter run
 Choose one of these methods:
 
 **Option A: Download as ZIP** (Easiest for beginners)
-1. Click the green "Code" button on GitHub
-2. Click "Download ZIP"
-3. Extract the ZIP file to a folder on your computer
+1. Go to [github.com/ArslanYousaf12/drop-flutter-prototype](https://github.com/ArslanYousaf12/drop-flutter-prototype)
+2. Click the green "Code" button
+3. Click "Download ZIP"
+4. Extract the ZIP file to a folder on your computer
 
 **Option B: Using Git** (If you have Git installed)
 ```bash
-git clone [your-repository-url]
-cd drop_prototype
+git clone https://github.com/ArslanYousaf12/drop-flutter-prototype.git
+cd drop-flutter-prototype
 ```
 
 #### Step 3: Open the Project
 1. Open VS Code or Android Studio
 2. Click "File" → "Open Folder"
-3. Select the `drop_prototype` folder
+3. Select the `drop-flutter-prototype` folder
 
 #### Step 4: Run Setup Script
 Open the terminal in your code editor (or navigate to the project folder in your system terminal) and run:
@@ -247,7 +250,7 @@ The app will build and launch on your connected device! 🎉
 - Solution: Connect a device or start an emulator (see Step 5 above)
 
 **❌ "Could not find a file named 'pubspec.yaml'"**
-- Solution: Make sure you're in the `drop_prototype` folder in your terminal
+- Solution: Make sure you're in the `drop-flutter-prototype` folder in your terminal
 
 **❌ Build errors or missing files**
 - Solution: Run the setup script again: `./setup.sh`
