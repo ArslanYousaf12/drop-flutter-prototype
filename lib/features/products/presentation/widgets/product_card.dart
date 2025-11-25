@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:drop_prototype/features/products/domain/entities/product_entity.dart';
 import 'package:drop_prototype/core/theme/app_colors.dart';
@@ -30,7 +31,11 @@ class ProductCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppConstants.radiusM),
       ),
       child: InkWell(
-        onTap: () => context.goToProductDetail(product.id),
+        onTap: () {
+          // Provide haptic feedback on tap (iOS/Android)
+          HapticFeedback.lightImpact();
+          context.goToProductDetail(product.id);
+        },
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
