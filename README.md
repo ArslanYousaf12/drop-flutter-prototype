@@ -6,6 +6,16 @@ A production-ready Flutter mobile application demonstrating Clean Architecture p
 ![Dart](https://img.shields.io/badge/Dart-3.0+-0175C2?logo=dart)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+## 🎥 Live Demo
+
+**Want to see it in action first?** Watch the app running on iOS Simulator:
+
+### 📱 [**Watch Demo Video →**](https://go.screenpal.com/watch/cTXT2mnqvXS)
+
+> **Quick Preview:** See the product feed, detail screens, Hero animations, pull-to-refresh, and loading states in action. No installation required—just watch!
+
+---
+
 ## 📱 Overview
 
 **Drop Prototype** is a skills assessment project showcasing how to build scalable, maintainable Flutter applications using industry best practices. While the app features just two screens (product feed and product detail), the architecture is designed to support enterprise-scale applications with dozens of features.
@@ -95,11 +105,37 @@ lib/
 
 ## 🚀 Quick Start
 
+> **👀 Just want to see what the app looks like?** [Watch the demo video](https://go.screenpal.com/watch/cTXT2mnqvXS) first!
+
 ### Prerequisites
 
-- **Flutter SDK**: 3.7.0 or higher
-- **Dart SDK**: 3.0 or higher
-- iOS Simulator / Android Emulator (or physical device)
+#### For Complete Beginners
+
+**New to Flutter?** Follow these video tutorials to install Flutter on your system:
+
+| Platform | Video Tutorial | Duration |
+|----------|---------------|----------|
+| 🪟 **Windows** | [Flutter Installation Guide for Windows](https://www.youtube.com/watch?v=2svrbgcHZew) | ~15 mins |
+| 🍎 **macOS** | [Flutter Installation Guide for Mac](https://www.youtube.com/watch?v=343PpFsTDvM) | ~15 mins |
+
+**What you need:**
+- **Flutter SDK**: Version 3.7.0 or higher
+- **Dart SDK**: Version 3.0 or higher (included with Flutter)
+- **Code Editor**: VS Code or Android Studio (explained in videos)
+- **Device**: iOS Simulator / Android Emulator or physical device
+
+**Quick Check:** After installing Flutter, open your terminal/command prompt and run:
+```bash
+flutter doctor
+```
+This command checks if Flutter is properly installed and shows what else you need.
+
+#### For Experienced Developers
+
+If you already have Flutter installed, ensure you have:
+- Flutter SDK 3.7.0+
+- Dart SDK 3.0+
+- Xcode (for iOS) or Android Studio (for Android)
 
 ### One-Command Setup
 
@@ -128,6 +164,95 @@ dart run build_runner build --delete-conflicting-outputs
 # 3. Run the app
 flutter run
 ```
+
+### Step-by-Step Guide for Beginners
+
+**Never used Flutter before?** Follow these simple steps:
+
+#### Step 1: Install Flutter
+1. Watch the video tutorial for your platform (see Prerequisites section above)
+2. Follow along with the video to install Flutter
+3. Open your terminal/command prompt and run `flutter doctor` to verify installation
+
+#### Step 2: Download This Project
+Choose one of these methods:
+
+**Option A: Download as ZIP** (Easiest for beginners)
+1. Click the green "Code" button on GitHub
+2. Click "Download ZIP"
+3. Extract the ZIP file to a folder on your computer
+
+**Option B: Using Git** (If you have Git installed)
+```bash
+git clone [your-repository-url]
+cd drop_prototype
+```
+
+#### Step 3: Open the Project
+1. Open VS Code or Android Studio
+2. Click "File" → "Open Folder"
+3. Select the `drop_prototype` folder
+
+#### Step 4: Run Setup Script
+Open the terminal in your code editor (or navigate to the project folder in your system terminal) and run:
+
+**On macOS/Linux:**
+```bash
+chmod +x setup.sh
+./setup.sh
+```
+
+**On Windows:**
+```bash
+sh setup.sh
+```
+
+This script will automatically:
+- ✅ Check if Flutter is installed correctly
+- ✅ Download all required packages
+- ✅ Generate necessary code files
+- ✅ Run tests to make sure everything works
+- ✅ Check for any issues
+
+#### Step 5: Connect a Device
+
+**Option A: Use an Emulator/Simulator**
+- **Android**: Open Android Studio → Tools → AVD Manager → Create Virtual Device
+- **iOS** (Mac only): Open Simulator app (comes with Xcode)
+
+**Option B: Use Your Physical Phone**
+- **Android**: Enable Developer Mode and USB Debugging ([guide](https://developer.android.com/studio/debug/dev-options))
+- **iOS**: Connect via cable and trust the computer
+
+Check connected devices:
+```bash
+flutter devices
+```
+
+#### Step 6: Run the App
+```bash
+flutter run
+```
+
+The app will build and launch on your connected device! 🎉
+
+**First time running?** It may take 2-5 minutes to build. Subsequent runs are much faster.
+
+### Common Issues for Beginners
+
+**❌ "flutter: command not found"**
+- Solution: Flutter is not installed or not in your PATH. Rewatch the installation video.
+
+**❌ "No devices found"**
+- Solution: Connect a device or start an emulator (see Step 5 above)
+
+**❌ "Could not find a file named 'pubspec.yaml'"**
+- Solution: Make sure you're in the `drop_prototype` folder in your terminal
+
+**❌ Build errors or missing files**
+- Solution: Run the setup script again: `./setup.sh`
+
+**Need more help?** Check the Troubleshooting section below or the [official Flutter documentation](https://docs.flutter.dev/).
 
 ## 🧪 Testing
 
