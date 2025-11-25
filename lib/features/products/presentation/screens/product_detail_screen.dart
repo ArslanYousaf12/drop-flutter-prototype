@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:go_router/go_router.dart';
 import 'package:drop_prototype/features/products/presentation/providers/product_providers.dart';
 import 'package:drop_prototype/core/constants/app_constants.dart';
 import 'package:drop_prototype/core/theme/app_colors.dart';
@@ -26,23 +27,42 @@ class ProductDetailScreen extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final productAsync = ref.watch(productDetailProvider(productId));
 
-    return Scaffold(
-      body: productAsync.when(
-        // Loading State
-        loading: () => const Center(
+    return productAsync.when(
+      // Loading State
+      loading: () => Scaffold(
+        appBar: AppBar(
+          title: const Text('Loading...'),
+        ),
+        body: const Center(
           child: CircularProgressIndicator(),
         ),
+      ),
 
-        // Error State
-        error: (error, stackTrace) => _buildErrorState(context, ref, error),
+      // Error State
+      error: (error, stackTrace) => _buildErrorState(context, ref, error),
 
-        // Success State
-        data: (product) => CustomScrollView(
+      // Success State
+      data: (product) => Scaffold(
+        body: CustomScrollView(
           slivers: [
             // App Bar with Hero Image
             SliverAppBar(
               expandedHeight: AppConstants.productDetailImageHeight,
               pinned: true,
+              leading: Container(
+                margin: const EdgeInsets.all(8),
+                decoration: BoxDecoration(
+                  color: Colors.black.withOpacity(0.5),
+                  shape: BoxShape.circle,
+                ),
+                child: IconButton(
+                  icon: const Icon(Icons.arrow_back, color: Colors.white),
+                  onPressed: () {
+                    context.go('/');
+                  },
+                  tooltip: 'Back',
+                ),
+              ),
               flexibleSpace: FlexibleSpaceBar(
                 background: Hero(
                   tag: 'product-image-$productId',
